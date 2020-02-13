@@ -1,6 +1,5 @@
 package gui003;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -14,10 +13,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import javax.swing.UIManager;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 
+@SuppressWarnings("serial")
 public class Vokaltest01 extends JFrame {
 
     private JPanel contentPane;
@@ -97,7 +96,8 @@ public class Vokaltest01 extends JFrame {
 	contentPane.add(btnEnde);
     }
     // Verschachtelte if else Anweisung
-    private void Vokaltest() {
+    @SuppressWarnings("unused")
+	private void Vokaltest() {
 	String eingabe;
 	char c;
 	boolean istVokal;
@@ -161,7 +161,6 @@ tfBuchstabe.selectAll();
     private void Vokaltest2() {
 	String eingabe;
 	char c;
-	boolean istVokal;
 	try {
 	eingabe = tfBuchstabe.getText();
 	c = eingabe.charAt(0);

@@ -1,6 +1,5 @@
 package gui003;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,7 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JEditorPane;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import java.awt.event.KeyAdapter;
@@ -18,7 +16,11 @@ import java.awt.Font;
 
 public class Schleifen extends JFrame {
 
-    private JPanel contentPane;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
     private JTextArea textAreaAusgabe1;
     private JTextArea textAreaAusgabe2;
     private JTextArea textAreaAusgabe3;
@@ -111,7 +113,8 @@ public class Schleifen extends JFrame {
 	}
     }
     
-    private void Doschleife() {
+    @SuppressWarnings("unused")
+	private void Doschleife() {
 	try {
 	int zahl = Integer.parseInt(tfEingabe.getText());
 	do { 
@@ -133,7 +136,8 @@ public class Schleifen extends JFrame {
 	}
     }
     
-    private void Forschleife() {
+    @SuppressWarnings("unused")
+	private void Forschleife() {
 	try {
 	for (int zahl = Integer.parseInt(tfEingabe.getText()) ; zahl < 101; zahl++) {
 	    textAreaAusgabe1.append("" + zahl);
