@@ -7,6 +7,8 @@ import java.awt.image.BufferedImage;
 import javax.swing.JComponent;
 
 public class ImageComponent extends JComponent {
+	public ImageComponent() {
+	}
 	private BufferedImage image;
 	
 	

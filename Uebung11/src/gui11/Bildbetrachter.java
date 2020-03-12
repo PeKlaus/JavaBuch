@@ -45,6 +45,8 @@ public class Bildbetrachter extends JFrame {
 	 * Create the frame.
 	 */
 	public Bildbetrachter() {
+		bild = new ImageComponent();
+		JScrollPane scrollPane = new JScrollPane();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 444, 586);
 		contentPane = new JPanel();
@@ -52,10 +54,6 @@ public class Bildbetrachter extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new MigLayout("", "[grow]", "[][grow]"));
 		
-		JScrollPane scrollPane = new JScrollPane();
-		contentPane.add(scrollPane, "cell 0 1,grow");
-		
-		bild = new ImageComponent();
 		
 		JButton btnBilddatiOeffnen = new JButton("Bilddatei \u00F6ffnen");
 		btnBilddatiOeffnen.addActionListener(new ActionListener() {
@@ -84,6 +82,7 @@ public class Bildbetrachter extends JFrame {
 			}
 		});
 		contentPane.add(btnBilddatiOeffnen, "cell 0 0,width 130");
+		contentPane.add(scrollPane, "cell 0 1,grow");
 		
 		
 		try {
@@ -96,4 +95,5 @@ public class Bildbetrachter extends JFrame {
 		bild.setImage(bufImg);
 		scrollPane.setViewportView(bild);
 	}
-}
+	
+} 
