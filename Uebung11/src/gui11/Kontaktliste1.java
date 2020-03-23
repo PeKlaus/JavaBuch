@@ -153,6 +153,7 @@ public class Kontaktliste1 extends JFrame {
 	btnEnde.setBounds(425, 235, 89, 23);
 	contentPane.add(btnEnde);
 	
+	// Erstellen der Model
 	kontakteModel = new DefaultListModel<String>();
 	listKontakte.setModel(kontakteModel);
 	

@@ -73,6 +73,7 @@ public class Kontakte extends JFrame {
 	setContentPane(contentPane);
 	contentPane.setLayout(null);
 	
+	
 	JLabel lblNachname = new JLabel("Nachname");
 	lblNachname.setBounds(10, 11, 105, 14);
 	contentPane.add(lblNachname);
@@ -139,6 +140,9 @@ public class Kontakte extends JFrame {
 	JList<String> listKontakte = new JList<String>();
 	listKontakte.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 	scrollPane.setViewportView(listKontakte);
+	// Erzeugung des Default Listmodel
+	kontakteModel = new DefaultListModel<String>();  
+	listKontakte.setModel(kontakteModel);
 	
 	JLabel lblKontaktliste = new JLabel("Kontaktliste");
 	lblKontaktliste.setBounds(10, 105, 131, 14);
@@ -164,8 +168,6 @@ public class Kontakte extends JFrame {
 	btnEnde.setBounds(425, 235, 89, 23);
 	contentPane.add(btnEnde);
 	
-	kontakteModel = new DefaultListModel<String>();  // Erzeugung des Default Listmodel
-	listKontakte.setModel(kontakteModel);
 	
 	if (!datei.exists()) {  //prüft ob eine Datei existiert
 		try {

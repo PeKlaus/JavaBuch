@@ -98,7 +98,7 @@ public class AlteZaehlweise extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 		    System.exit(0);
 		}
-	});
+		});
 	btnEnde.setBounds(289, 159, 89, 23);
 	contentPane.add(btnEnde);
 	
